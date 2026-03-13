@@ -8,8 +8,12 @@ class TesteController extends Controller
 {
     public function exibir()
     {
-        $mensagem = 'Isso veio do controller.';
-        return view('teste', ['texto' => $mensagem]);
+        // O Model "Tarefa" busca tudo na tabela "tarefas"
+    $tarefas = Tarefa::all();
+
+    return view('teste', [
+        'minhasTarefas' => $tarefas
+    ]);
     }
 
     public function criarTarefa()

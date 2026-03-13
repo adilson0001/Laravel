@@ -4,15 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Página 2</title>
+    @vite(['resources/css/app.css'])
 </head>
 <body>
-        <h1>Minhas tarefas</h1>
-
-        @foreach ($minhasTarefas as $t)
-    <li>{{ $t->titulo }}-{{ $t->concluida ? 'Concluida' : 'Pendente' }}
-
-    </li>
-        @endforeach
+    <h1>Aqui é a página 2</h1>
+    <a href="{{ route('rota.pagina1') }}">
+        <button>Voltar para página 1</button>
+    </a>
 </body>
 </html>
