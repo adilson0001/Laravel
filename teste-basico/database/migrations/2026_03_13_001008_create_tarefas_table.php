@@ -12,8 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('tarefas', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        $table->id();
+        $table->string('titulo'); // Coluna de texto
+        $table->boolean('concluida')->default(false); // Coluna booleana
+        $table->timestamps(); // Cria as colunas created_at e updated_at
         });
     }
 
