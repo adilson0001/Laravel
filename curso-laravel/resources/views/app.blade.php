@@ -17,13 +17,26 @@
 
     <p>{{ $nome }}</p>
 
-    @if ($nome == "pedro")
+    @if ($nome == 'pedro')
         <p>O nome é Pedro</p>
     @else
-    <p>O nome não é Pedro é {{ $nome }}</p>
+        <p>O nome não é Pedro é {{ $nome }}</p>
     @endif
 
-    <p>O {{ $nome }} tem {{ $idade }} anos e gosta de {{ $hobbie }}. <br> Ele quer ser um {{ $prof }} no Futuro.</p>
+    <p>O {{ $nome }} tem {{ $idade }} anos e gosta de {{ $hobbie }}. <br> Ele quer ser um
+        {{ $prof }} no Futuro.</p>
+
+    @for ($i = 0; $i < @count($array); $i++)
+        <p>{{ $array[$i] }} - {{ $i }}</p>
+        @if ($i == 2)
+            <p>O indiçe é {{ $i }}. <br></p>
+        @endif
+    @endfor
+
+    @foreach ($nomes as $nume)
+        <p>{{ $loop->index }}</p>
+        <p>Nome: {{ $nume }}</p>
+    @endforeach
 
 
 
