@@ -11,4 +11,12 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::inertia('dashboard', 'dashboard')->name('dashboard');
 });
 
+Route::get('/contact', function(){
+    return view('contact');
+});
+
+Route::get('/produtos', function(){
+    return view('products');
+});
+
 require __DIR__.'/settings.php';
