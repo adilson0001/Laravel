@@ -43,9 +43,7 @@
             @csrf
             <label><strong>📄 Selecione o arquivo CSV:</strong></label><br><br>
             <input type="file" name="file" accept=".csv" required>
-            <br><br>
-            <small><strong>Formato esperado:</strong> nome,email<br>
-            Exemplo: João Silva,joao@email.com</small>
+            
             <br><br>
             <button type="submit">🚀 Importar CSV</button>
         </form>

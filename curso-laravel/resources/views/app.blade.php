@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.main')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <script src="/js/script.js"></script>
-</head>
+@section('title','HDC Events')
 
-<body>
+@section('content')
+
+
     <h1>pag 1</h1>
 
     @if (10 > 5)
@@ -40,9 +34,4 @@
         <p>Nome: {{ $nume }}</p>
     @endforeach
 
-
-
-
-</body>
-
-</html>
+@endsection

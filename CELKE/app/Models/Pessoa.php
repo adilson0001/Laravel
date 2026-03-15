@@ -9,6 +9,7 @@ class Pessoa extends Model
 {
     use HasFactory;
 
+    protected $table = 'pessoas';
     protected $fillable = [
         'nome',
         'email'
